@@ -6,6 +6,12 @@ btn.onclick = () => {
         throw new Error("Brower doesn't support Notification")
         
     Notification.requestPermission().then((permission)=> {
-        new Notification("Hello World!")
+
+        let notificationOptions = {
+            body: "Welcome to Javascript Notification",
+            icon: "anh1.jpg"
+        }
+
+        new Notification("Hello World!",notificationOptions)
     })    
 }
